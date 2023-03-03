@@ -26,3 +26,7 @@ C:\Users\User\source\repos\Airlines\Airlines\obj\Debug\views\pages\admin\AdminIn
 C:\Users\User\source\repos\Airlines\Airlines\obj\Debug\views\pages\user\UserIndexPage.g.cs
 C:\Users\User\source\repos\Airlines\Airlines\obj\Debug\views\pages\admin\AdminIndexPage.baml
 C:\Users\User\source\repos\Airlines\Airlines\obj\Debug\views\pages\user\UserIndexPage.baml
+C:\Users\User\source\repos\Airlines\Airlines\obj\Debug\views\AddUserWindow.g.cs
+C:\Users\User\source\repos\Airlines\Airlines\obj\Debug\views\AddUserWindow.baml
+C:\Users\User\source\repos\Airlines\Airlines\obj\Debug\views\EditUserWindow.g.cs
+C:\Users\User\source\repos\Airlines\Airlines\obj\Debug\views\EditUserWindow.baml

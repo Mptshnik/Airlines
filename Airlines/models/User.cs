@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Airlines.models
     [Table("users")]
     public class User
     {
+        [Key]
         [Column("ID")]
         public int ID { get; set; }
 
@@ -31,5 +33,16 @@ namespace Airlines.models
         [Column("RoleID")]
         public int RoleID { get; set; }
         public virtual Role Role { get; set; }
+        [NotMapped]
+
+        public int Age
+        { 
+            get 
+            { 
+                int age = DateTime.Now.Year - Birthdate.Year;
+
+                return age;
+            } 
+        }
     }
 }

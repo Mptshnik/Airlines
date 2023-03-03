@@ -13,7 +13,7 @@ namespace Airlines.models
         public int ID { get; set; }
 
         [Column("Title")]
-        public string Tilte { get; set; }
+        public string Title { get; set; }
         [Column("Phone")]
         public string Phone { get; set; }
         [Column("Contact")]

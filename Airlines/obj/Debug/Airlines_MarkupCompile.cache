@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\User\source\repos\Airlines\Airlines\App.xaml
-4-2109790405
+6-101568144
 
-15-1434800612
+17-1357045013
 16-1915943495
-views\MainWindow.xaml;views\pages\admin\AdminIndexPage.xaml;views\pages\AuthorizationPage.xaml;views\pages\user\UserIndexPage.xaml;
+views\AddUserWindow.xaml;views\EditUserWindow.xaml;views\MainWindow.xaml;views\pages\admin\AdminIndexPage.xaml;views\pages\AuthorizationPage.xaml;views\pages\user\UserIndexPage.xaml;
 
 False
 

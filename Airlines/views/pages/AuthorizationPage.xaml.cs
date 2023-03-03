@@ -46,9 +46,18 @@ namespace Airlines.views.pages
                 return;
             }
 
+            if(!user.Active)
+            {
+                MessageBox.Show("Вас забанил администратор");
+
+                return;
+            }
+
             TemporaryStorage temporaryStorage = TemporaryStorage.GetInstance();
 
             temporaryStorage.Data.Add("FirstName", user.FirstName);
+            temporaryStorage.Data.Add("User", user);
+
             Session session = new Session()
             {
                 Date = DateTime.Today.ToShortDateString(),

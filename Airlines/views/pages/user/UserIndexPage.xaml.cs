@@ -42,10 +42,14 @@ namespace Airlines.views.pages.user
 
         private void LoadData()
         {
-            List<Session> sessions = database.Sessions.Where(s => s.ID != currentSession.ID)
-               .OrderByDescending(s => s.LoginTime)
-               .ThenByDescending(s => s.Date)
-               .ToList();
+            int currentUserID = (temporaryStorage.Data["User"] as User).ID;
+
+            List<Session> sessions = database.Sessions
+                .Where(s => s.ID != currentSession.ID)
+                .Where(s => s.UserID == currentUserID)
+                .OrderByDescending(s => s.Date)
+                .ThenByDescending(s => s.LoginTime)
+                .ToList();
 
             TimeSpan timeSpentOnSystem = TimeSpan.Zero;
             foreach(Session session in sessions)

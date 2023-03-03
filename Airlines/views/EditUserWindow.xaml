@@ -1,0 +1,94 @@
+﻿<Window x:Class="Airlines.views.EditUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Airlines.views"
+        mc:Ignorable="d"
+        Title="EditUserWindow"  Height="450" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Left">Email address:</TextBlock>
+                <TextBox IsReadOnly="True" Grid.Column="1" Name="tbEmail" ></TextBox>
+            </Grid>
+            <Grid Grid.Row="1" Margin="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Left">First name:</TextBlock>
+                <TextBox IsReadOnly="True" Grid.Column="1" Name="tbFirstName" ></TextBox>
+            </Grid>
+            <Grid Grid.Row="2" Margin="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Left">Last name:</TextBlock>
+                <TextBox IsReadOnly="True" Grid.Column="1" Name="tbLastName" ></TextBox>
+            </Grid>
+            <Grid Grid.Row="3" Margin="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Left">Office:</TextBlock>
+                <ComboBox IsReadOnly="True"  FontSize="14" Grid.Column="1" Name="cbOffices" DisplayMemberPath="Title"></ComboBox>
+            </Grid>
+            <Grid Grid.Row="4" Margin="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Left">Birthdate:</TextBlock>
+                <TextBox IsReadOnly="True" Grid.Column="1" Name="tbBirthdate">mm.dd.yyyy</TextBox>
+            </Grid>
+            <Grid Grid.Row="5" Margin="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Left">Password:</TextBlock>
+                <TextBox IsReadOnly="True" Grid.Column="1" Name="tbPassword"></TextBox>
+            </Grid>
+            <Grid Grid.Row="6" Margin="16 0 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock HorizontalAlignment="Left">Role: </TextBlock>
+                <StackPanel Grid.Column="1" Orientation="Vertical">
+                    <RadioButton GroupName="Roles" Name="rbUserRole" Content="User"/>
+                    <RadioButton GroupName="Roles" Name="rbAdminRole" Content="Administrator"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Name="btnApply" Width="100" Click="btnApply_Click">
+                    Apply
+                </Button>
+                <Button IsCancel="True" Grid.Column="1" Width="100">
+                    Cancel
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
